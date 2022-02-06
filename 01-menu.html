@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo for Dropdown</title>
+    <style>
+
+        .list-unstyled {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .main-menu { 
+            background-color: lightgray;    
+        }
+
+        .main-menu > li {
+           display:inline-block;
+        }
+
+        .main-menu > li > a {
+           display:inline-block;
+           padding: 0.5em;
+           text-decoration: none;
+           color:white;
+        }
+
+        .main-menu > li > a:hover {
+            background-color:black;
+        }
+
+        .item-with-sub-menu {
+            position:relative;
+        }
+
+        .sub-menu {
+            display:none;
+            position:absolute;
+            top:35px;
+            left:0px;
+            white-space: nowrap;
+            padding:1em;
+            background-color: lightgray; 
+        }
+
+        .sub-menu  > a {
+            text-decoration:none;
+        }
+
+        .sub-menu > li > a:hover {
+            background-color:black;
+        }
+
+        .item-with-sub-menu:hover .sub-menu {
+            display:block;
+        }
+
+        .dropdown {
+            background-color: red;
+            font-size:40px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="dropdown"> Dropdown Menu</div>
+     <nav>
+        <ul class="main-menu list-unstyled">
+            <li class="item-with-sub-menu">
+                <a href="/link1">Link 1</a>
+                <ul class="sub-menu list-unstyled">
+                    <li><a href="/link1/item1">Item 1</a></li>
+                    <li><a href="/link1/item2">Item 2</a></li>
+                    <li><a href="/link1/item3">Item 3</a></li>
+                </ul>
+            </li>
+            <li class="item-with-sub-menu">
+                <a href="/link2">Link 2</a>
+                <ul class="sub-menu list-unstyled">
+                    <li><a href="/link2/item1">Item 1</a></li>
+                    <li><a href="/link2/item2">Item 2</a></li>
+                    <li><a href="/link2/item3">Item 3</a></li>
+                </ul>
+            </li>
+            <li class="item-with-sub-menu">
+                <a href="/link3">Link 3</a>
+                <ul class="sub-menu list-unstyled">
+                    <li><a href="/link3/item1">Item 1</a></li>
+                    <li><a href="/link3/item2">Item 2</a></li>
+                    <li><a href="/link3/item3">Item 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
